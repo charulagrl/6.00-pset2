@@ -1,0 +1,6 @@
+def evaluatePoly(poly, x):
+    val = 0.0
+    for i in range(len(poly)):
+        val = val + poly[i] * (x ** i)
+    return val
+        

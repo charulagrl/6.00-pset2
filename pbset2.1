@@ -1,0 +1,23 @@
+x = 1
+sum = 0
+balance = float(raw_input("balance = "))
+air = float(raw_input("annualInterestRate = "))
+mmr = float(raw_input("monthlypaymentRate = "))
+
+for x in range(12):
+    mmp = mmr * balance
+    rb = (balance - mmp)*(1 + air/12)
+    x += 1
+    balance = rb
+    print "Month: ",
+    print (x)
+    print "Minimum monthly payment: ",
+    print round(mmp, 2)
+    print "Remaing balance: ",
+    print round(balance, 2)
+    sum += mmp
+
+print "Total paid",
+print round(sum, 2)
+print "Remaining balance",
+print round(balance, 2)
